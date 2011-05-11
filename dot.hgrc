@@ -1,0 +1,28 @@
+[ui]
+username= My Name <name@example.com>
+verbose = True
+
+[auth]
+bitbucket.prefix = bitbucket.org
+bitbucket.username = username
+bitbucket.password = passwd
+bitbucket.schemes = http https
+
+[extensions]
+hgext.mq=
+color=
+# forest= ... forest.py
+
+[color]
+diff.diffline = bold
+diff.extended = cyan bold
+diff.file_a = red bold
+diff.file_b = green bold
+diff.hunk = magenta
+diff.deleted = red
+diff.inserted = green
+diff.changed = white
+diff.trailingwhitespace = bold red_background
+qseries.applied = blue bold underline
+qseries.unapplied = black bold
+qseries.missing = red bold

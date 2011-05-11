@@ -1,0 +1,10 @@
+bar on bottom
+border 1
+colmode stack
+focuscolors #000000 #81654f #000000
+font xft:Sans-9
+fontpad 0 0 0 0
+grabmod Mod4
+incmode squeeze
+normcolors #000000 #c1c48b #81654f
+view 1

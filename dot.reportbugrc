@@ -1,0 +1,30 @@
+# Specify one of the following to digitally sign bug reports automatically.
+sign gpg
+# sign pgp
+
+# Specify the GPG/PGP keyid to use instead of the default one on your system.
+keyid 4960DB11
+
+
+# Default "from" email address and real name (override with env. vars.)
+email "nodakai@gmail.com"
+realname "NODA, Kai"
+
+# Default HTTP Proxy (override with the env. variable)
+# http_proxy http://proxy.example.com:3128/
+
+# Use this to enable the internal MTA (bypassing /usr/sbin/sendmail)
+# smtphost localhost
+#
+# You can also specify a port other than 25
+smtphost smtp.gmail.com
+
+# Username and password for SMTP
+smtpuser nodakai@gmail.com
+smtppasswd password
+
+# Use TLS encryption.
+smtptls
+
+# Default operating mode (novice, standard, advanced, expert)
+mode advanced

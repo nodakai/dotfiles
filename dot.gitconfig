@@ -1,0 +1,46 @@
+[user]
+	email = nodakai@gmail.com
+	name = NODA, Kai
+
+[core]
+	excludesfile = ~/.gitignore
+	pager = less
+	editor = vim
+
+[color]
+	ui = auto
+
+[push]
+	default = tracking
+
+[alias]
+	co = checkout
+	c = commit
+	ci = commit -a
+	am = commit --amend
+	st = status -sb
+	sh = show
+	so = remote show origin
+	up = pull --rebase
+	a = add
+
+	br = branch
+	ba = branch -a
+	bn = branch --no-merged
+
+	wc = whatchanged
+	ls = log --stat=120,120
+	lp = log -p
+	lr = log origin
+	lgg = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+	lga = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+
+	di = diff -b
+	d1 = diff -b HEAD~1
+	staged = diff -b --cached
+	both = diff -b HEAD
+
+[github]
+	user = nodakai
+	token = token
+	email = nodakai@gmail.com
