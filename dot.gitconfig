@@ -23,6 +23,7 @@
 	so = remote show origin
 	up = pull --rebase
 	a = add
+	au = add -u
 
 	br = branch
 	ba = branch -a
