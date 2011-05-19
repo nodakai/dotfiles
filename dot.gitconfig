@@ -24,6 +24,8 @@
 	up = pull --rebase
 	a = add
 	au = add -u
+	ai = add -i
+	ap = add -p
 
 	br = branch
 	ba = branch -a
