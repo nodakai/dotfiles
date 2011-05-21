@@ -25,6 +25,17 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 export LANG=ja_JP.UTF-8
 path=($HOME/local/bin $path $HOME/prog/exp/ruby)
+
+for dir in $HOME/x/i-*/bin; do
+    if [ -d "$dir" ]; then
+        path=("$dir" $path)
+    fi
+done
+
+if [ -d $HOME/ocaml/bin ]; then
+    path=($HOME/ocaml/bin $path)
+fi
+
 export EDITOR=vim
 export PAGER='lv'
 export GREP_OPTIONS='--binary-files=without-match --exclude=.tags --exclude-dir=.git --exclude-dir=.svn --exclude=*~ --color=auto'
