@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000000
+SAVEHIST=1000000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -37,7 +37,7 @@ if [ -d $HOME/ocaml/bin ]; then
 fi
 
 export EDITOR=vim
-export PAGER='lv'
+export PAGER=lv
 export GREP_OPTIONS='--binary-files=without-match --exclude=.tags --exclude-dir=.git --exclude-dir=.svn --exclude=*~ --color=auto'
 export PROMPT=$'%{\e[${PROMPT_COLOR}m%}%T [%n@%m] %~%(!.#.$)%{\e[m%} '
 # export PYTHONPATH=$HOME/vt/local/lib64/python2.4/site-packages:$PYTHONPATH
