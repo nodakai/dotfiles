@@ -60,6 +60,7 @@ alias la='ls -A'
 alias ll='ls -l'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
 alias make='LANG=C make'
+alias man='LANG=C man'
 
 stty stop undef
 
