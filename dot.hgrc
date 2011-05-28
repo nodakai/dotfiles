@@ -1,6 +1,7 @@
 [ui]
 username= My Name <name@example.com>
 verbose = True
+ignore = ~/.hgignore
 
 [auth]
 bitbucket.prefix = bitbucket.org

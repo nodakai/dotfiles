@@ -1,0 +1,22 @@
+syntax:glob
+
+# compiler outputs
+*.[oa]
+*.o.*
+*.so
+*.so.dbg
+
+# backup files
+*~
+.*~
+*.bak
+*.org
+*.orig
+*.sw[nop]
+\#*
+.\#*
+
+# ctags output
+tags
+TAGS
+.tags
