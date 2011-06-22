@@ -1,1 +1,1 @@
-/MPlayer|VLC/ -> ~
+/MPlayer|VLC|Office/ -> ~
