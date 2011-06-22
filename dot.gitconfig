@@ -26,6 +26,7 @@
 	au = add -u
 	ai = add -i
 	ap = add -p
+	rc = rm --cached
 
 	br = branch
 	ba = branch -a
@@ -39,9 +40,8 @@
 	lga = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
 
 	di = diff -b
-	d1 = diff -b HEAD~1
-	staged = diff -b --cached
-	both = diff -b HEAD
+	dc = diff -b --cached
+	db = diff -b HEAD
 
 [github]
 	user = nodakai
