@@ -3,6 +3,7 @@
 *.o.*
 *.so
 *.so.dbg
+*.pyc
 
 # backup files
 *~
