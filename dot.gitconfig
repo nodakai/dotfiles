@@ -47,3 +47,10 @@
 	user = nodakai
 	token = token
 	email = nodakai@gmail.com
+
+[sendemail]
+	from = NODA, Kai <nodakai@gmail.com>
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpuser = nodakai@gmail.com
+	smtpserverport = 587
