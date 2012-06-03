@@ -38,6 +38,7 @@ set hidden
 set lazyredraw
 set suffixes+=Makefile,tags,.a,.aux,.bbl,.blg,.bz,.bz2,.class,.cmi,.cmo,.cmx,.dvi,.fas,.fasl
 set suffixes+=.idx,.ilg,.ind,.log,.lib,.lzh,.mak,.obj,.out,.pdf,.scn,.so,.tmp,.toc,.zip
+set wildignorecase
 set visualbell
 " ページ移動してもカーソルは同じ列
 set nostartofline
@@ -318,9 +319,9 @@ endif
 let mapleader = ","
 nn <Leader><Leader> <Leader>
 " カレントファイルのディレクトリに関わること
-nn <Leader>c :cd<Space><C-R>=expand('%:p:h')<CR><CR>
-nn <Leader>e :e<Space><C-R>=expand('%:p:h')<CR>/
-cno <Leader>d <C-R>=expand('%:p:h')<CR>/
+nn <Leader>c :cd<Space><C-R>=expand('%:~:.:h')<CR><CR>
+nn <Leader>e :e<Space><C-R>=expand('%:~:.:h')<CR>/
+cno <Leader>d <C-R>=expand('%:~:.:h')<CR>/
 " Quick-fix
 nn <Leader>m :mak<Up><CR>
 nn <Leader>l :cl!<CR>
@@ -359,7 +360,7 @@ nm <CR> o<ESC>
 "ino <C-F> <Esc>gUiw`]a
 inoremap <C-U> <Nop>
 " tabs
-nn <Leader>t :tabedit %<CR>
+nn <Leader>t :tab split<CR>
 
 " ----------------------------------------------------------------------
 "       SHORT SCRIPT SECTION
