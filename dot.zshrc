@@ -5,7 +5,7 @@ SAVEHIST=1000000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/k_noda/.zshrc'
+zstyle :compinstall filename '/home/nodakai/.zshrc'
 
 autoload -Uz compinit
 compinit -C
@@ -20,27 +20,23 @@ setopt AUTO_CD
 setopt NO_FLOW_CONTROL
 setopt nonomatch
 setopt prompt_subst
+setopt extended_glob
 
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
-export LANG=ja_JP.UTF-8
+PROMPT=$'%{\e[${PROMPT_COLOR}m%}%T [%n@%m] %~%(!.#.$)%{\e[m%} '
+
 path=($HOME/local/bin $path $HOME/prog/exp/ruby)
 
-for dir in $HOME/x/i-*/bin; do
+for dir in $HOME/*/i/bin; do
     if [ -d "$dir" ]; then
         path=("$dir" $path)
     fi
 done
 
 if [ -d $HOME/ocaml/bin ]; then
-    path=($HOME/ocaml/bin $path)
+    path=($HOME/ocaml/{,s}bin $path)
 fi
-
-export EDITOR=vim
-export PAGER=lv
-export GREP_OPTIONS='--binary-files=without-match --exclude=.tags --exclude-dir=.git --exclude-dir=.svn --exclude=*~ --color=auto'
-export PROMPT=$'%{\e[${PROMPT_COLOR}m%}%T [%n@%m] %~%(!.#.$)%{\e[m%} '
-# export PYTHONPATH=$HOME/vt/local/lib64/python2.4/site-packages:$PYTHONPATH
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '(%s)-%b '
@@ -66,7 +62,16 @@ stty stop undef
 
 function mkcd { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
-function l {
+function mymake {
+    local i=${1:-01} n=${2:-4}
+    make -j $n &> make$i.log &
+    sleep 0.1
+    tailf make$i.log
+}
+
+function fnd {
+    local pat=$1 dir=${2:-.}
+    find "$dir" -type d \( -name .svn -o -name .git -o -name CVS -o -name .hg \) -prune -o -iname "*$pat*" -print
 }
 
 umask 002
